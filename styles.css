@@ -1,0 +1,13 @@
+body{
+    background-color: black;
+}
+
+.center{
+    margin: auto;
+    text-align: center;
+}
+
+.text{
+    font: 15px sans-serif;
+    color: rgb(255,255,255)
+}
