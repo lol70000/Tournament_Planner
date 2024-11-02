@@ -1,4 +1,4 @@
-document.getElementById("submit").onclick = main;
+//document.getElementById("submit").onclick = main;
 
 class team {
     constructor(teamname){
@@ -43,6 +43,8 @@ function main(){
     time_per_game = document.getElementById("time_per_game").value;
     time_per_break = document.getElementById("time_per_break").value;
     for(i = 0; i < num_of_games; i++){
-        
+        console.log(i);
     }
 }
+
+main
