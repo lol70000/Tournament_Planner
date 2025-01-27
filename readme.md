@@ -1,6 +1,6 @@
 # Tournament Plan Generator
 
-## class structure
+## class structure(old)
 
 - Team
     - Name (f.E. Team 1/ Team A)
@@ -16,3 +16,28 @@
 
 - Table
     - a dict which combines all the gametimes in to one table ans ads the time as the key and then the gametimes as a dict within the dict.1
+
+## Using a dict
+
+### Proposed structure of Teams Dictionary
+
+````
+dict = {1: {
+    num_follow : 0
+    }
+}
+````
+
+### Proposed structure of Games Dictionary
+
+````
+dict = {1: {
+        game_1: [team,team],
+        ...
+    },
+    {
+        game_1: [team,team],
+        ...
+    }
+}
+````
