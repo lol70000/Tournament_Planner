@@ -34,10 +34,12 @@ dict = {1: {
 dict = {1: {
         game_1: [team,team],
         ...
+        teams_playing: []
     },
     {
         game_1: [team,team],
         ...
+        teams_playing: []
     }
 }
 ````
