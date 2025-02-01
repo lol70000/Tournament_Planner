@@ -1,5 +1,3 @@
-document.getElementById("submit").onclick = main;
-
 async function main() {
     games = {};
 
@@ -16,12 +14,24 @@ async function main() {
     teams = await make_teams_dict(num_teams);
     combinations = await make_all_combinations(teams);
 
-    await getRandomElement(combinations);
+    games = await make_games_dict(combinations, num_gyms);
+};
+
+async function make_games_dict(combinations, number_gyms) {
+    games = {};
+    for(i = 1;i <= combinations.length/number_gyms; i++){
+        games[i] = {};
+        for(j=1; j <= number_gyms; j++){
+            games[i][j] = [];
+        };
+        games[i]["teams_playing"] = [];
+    };
+    return games;
 };
 
 async function getRandomElement(combinations) {
     const random_index = Math.floor(Math.random() * combinations.length);
-    console.log(random_index);
+    return random_index;
 };
 
 async function make_all_combinations(teams) {
@@ -48,3 +58,5 @@ async function make_teams_dict(number_teams){
     };
     return teams;
 };
+
+document.getElementById("submit").addEventListener('click',main)
