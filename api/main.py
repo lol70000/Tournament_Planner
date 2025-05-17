@@ -16,7 +16,7 @@ app.add_middleware(
 
 @app.get("/api/plan/{teams}/{gyms}/{starttime}/{time_per_game}/{time_per_break}")
 def make_game_plan(teams: int, gyms: int, starttime: str, time_per_game: int, time_per_break: int):
-    make_table(teams, gyms, starttime,time_per_game, time_per_break)
+    return make_table(teams, gyms, starttime,time_per_game, time_per_break)
 
 def main():
     uvicorn.run(app, host="0.0.0.0", port=8080, log_level="info", timeout_keep_alive=60)
